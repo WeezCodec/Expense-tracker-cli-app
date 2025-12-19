@@ -1,0 +1,20 @@
+[
+   {
+      "Category": "Transportation",
+      "Price": 200.0,
+      "Date": "2020-10-10",
+      "Description": "TF"
+   },
+   {
+      "Category": "Clothing",
+      "Price": 300.0,
+      "Date": "2020-10-12",
+      "Description": "Clothes"
+   },
+   {
+      "Category": "Feeding",
+      "Price": 100.0,
+      "Date": "2020-10-10",
+      "Description": "Food"
+   }
+]
