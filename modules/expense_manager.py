@@ -8,9 +8,10 @@ class expense_manager :
 
     def __init__(self ) : 
 
-        self.view_expenses = []
+        self.expenses = []
+        self.last_action =  None
 
-    def add_expenses( self ) : 
+    def add_expense( self ) : 
 
         category = input("Enter Category: ")
         price = float(input("Enter Price: "))
@@ -24,30 +25,27 @@ class expense_manager :
             
         opt_des = input("Enter description (optional): ")
 
-        view_expense = {
+        expense = {
             "Category" : category , 
             "Price" : price , 
             "Date": date,
             "Description" : opt_des
         }
             
-        self.view_expenses.append(view_expense)
-        return self.view_expenses
+        self.expenses.append(expense)
+        self.last_action = "add"
+        return self.expenses 
     
-    def delete_expenses(self) : 
+    def delete_expenses(self ) : 
         name_to_delete = input("Enter the category you want to delete: ")
-        self.view_expenses =[
-            record for record in self.view_expenses
+        self.expenses =[
+            record for record in self.expenses
             if  record["Category"] != name_to_delete
         ]
-        return self.view_expenses
+        self.last_action = "delete"
+        return self.expenses
 
-
-show_expense = expense_manager()
-for i in range (2) :
-    print(show_expense.add_expenses())
-
-print(show_expense.delete_expenses())
+expense = expense_manager()
 
 
 

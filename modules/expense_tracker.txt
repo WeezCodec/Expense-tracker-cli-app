@@ -1,19 +1,13 @@
 [
    {
       "Category": "Transportation",
-      "Price": 200.0,
-      "Date": "2020-10-10",
+      "Price": 2000.0,
+      "Date": "2010-08-08",
       "Description": "TF"
    },
    {
-      "Category": "Clothing",
-      "Price": 300.0,
-      "Date": "2020-10-12",
-      "Description": "Clothes"
-   },
-   {
       "Category": "Feeding",
-      "Price": 100.0,
+      "Price": 3000.0,
       "Date": "2020-10-10",
       "Description": "Food"
    }
