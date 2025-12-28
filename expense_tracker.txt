@@ -1,0 +1,8 @@
+[
+   {
+      "Category": "Transportation",
+      "Price": 300.0,
+      "Date": "2020-10-10",
+      "Description": "TF"
+   }
+]

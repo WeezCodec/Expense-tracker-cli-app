@@ -2,7 +2,6 @@
 Calculates total expenses.
 Calculates monthly breakdown.
 """
-from  expense_manager import expense_manager
 
 class price_calculation : 
 
@@ -22,13 +21,7 @@ class price_calculation :
 
 
 
-# pc_initialization = price_calculation()
-# show_expenses = expense_manager()
-# per_expense = show_expenses.add_expenses()
-# show_price = pc_initialization.calculate_total_price(per_expense)
-# show_price = pc_initialization.calculate_monthly_total(per_expense)
 
-# print(show_price)
 
 
 
