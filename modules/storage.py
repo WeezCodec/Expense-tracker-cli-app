@@ -19,26 +19,28 @@ class expense_storage:
         action = expense.last_action
         file = Path ( file_name )
 
-        if action == "add" and  file.exists()  :  #Checks if file_name exists
+        try : 
 
-            with open ( file_name , "r") as file : 
-                data = json.load(file)
+            if action == "add" and  file.exists()  :  #Checks if file_name exists
+
+                with open ( file_name , "r") as file : 
+                    data = json.load(file)
                 
-                data.extend (expense_list) # Using EXTEND here instead of APPEND 
-                # print("File updated successfully.")    
+                    data.extend (expense_list) # Using EXTEND here instead of APPEND 
+                    # print("File updated successfully.")    
 
-            with open(file_name , "w") as file :
-                json.dump ( data , file , indent= 3 )    
-                print("File updated successfully.")
+                with open(file_name , "w") as file :
+                    json.dump ( data , file , indent= 3 )    
+                    print("File updated successfully.")
 
 
-        else : 
-                # with open(file_name , "w") as file : 
-                    # file.write ("===== EXPENSE - TRACKET LIST =====")
+            else : 
                 with open ( file_name , "w") as file : 
-                    json.dump(expense_list , file , indent= 3 )
-                            
+                    json.dump(expense_list , file , indent= 3 )   
                     print("File saved successfully.")    
+
+        except ValueError as e : 
+            print(f"File error {e}")            
            
 
     def read_from_file(self ) : 
